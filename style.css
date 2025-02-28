@@ -1,0 +1,134 @@
+/* Styles généraux */
+body {
+    background: url(images/plateau.jpg);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+h1.squadro {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+h4.titre{
+    display: inline-block; 
+    border: 1px solid black;
+    border-radius: 10px; 
+    padding : 5px;
+}
+/* Plateau Squadro */
+.plateau-squadro {
+    gap: 2px;
+    margin: 20px auto;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px; 
+}
+
+/* Styles des cases */
+.case {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+}
+
+.vide {
+    background-color: #ccc;
+}
+
+.neutre {
+    background-color: rgba(238, 25, 25, 0.981);
+    color: white;
+}
+.neutrePlateau {
+    background-color: rgba(57, 57, 57, 0.981);
+    color: white;
+}
+
+.blanc {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.noir {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+/* Bords du plateau (cases avec les chiffres de vitesse) */
+.vitesse {
+    background-color: #d66;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.plateau-flou {
+    filter: blur(5px); /* Applique un flou de 5px */
+    pointer-events: none; /* Empêche l'interaction avec le plateau pendant que la modale est active */
+}
+
+/* Style de la modale */
+.modale {
+    position: fixed;
+    bottom: 20px; /* Positionne la modale en bas de la page */
+    left: 50%;
+    transform: translateX(-50%); /* Centre horizontalement */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère autour de la modale */
+    width: 80%;
+    max-width: 400px;
+}
+
+.modale button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.modale button:last-child {
+    margin-right: 0;
+}
+
+.modale form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modale button {
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    border: none; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.modale button[name='confirm'][value='yes'] {
+    background-color: #28a745; /* Vert */
+    color: white; /* Texte en blanc */
+}
+
+.modale button[name='confirm'][value='no'] {
+    background-color: #dc3545; /* Rouge */
+    color: white; /* Texte en blanc */
+}
+button:disabled {
+    cursor: not-allowed;
+}
+button[name='rejouer']{
+    padding : 10px ;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: green ;
+    color: white
+}
